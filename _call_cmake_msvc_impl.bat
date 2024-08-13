@@ -41,16 +41,18 @@
 @goto ERR
 
 :PERFORM_GENERATE
-cmake -G %GENERATOR%  -A %ARCH% -B ~dp0\..\.out\%TOOLSET%\%ARCH_PATH%
+cmake -S "%~dp0\.." -G %GENERATOR%  -A %ARCH% -B "%~dp0\..\.out\%TOOLSET%\%ARCH_PATH%"
 @if ERRORLEVEL 1 goto ERR
 @goto END
 
 @rem https://ss64.com/nt/errorlevel.html
 :PERFORM_BUILD
-cmake --build ~dp0\..\.out\%TOOLSET%\%ARCH_PATH% --config Debug   --target ALL_BUILD -j 8 -- 
+@rem -S "%~dp0\.."
+@rem 
+cmake --build "%~dp0\..\.out\%TOOLSET%\%ARCH_PATH%" --config Debug   --target ALL_BUILD -j 8 -- 
 @rem echo %errorlevel%
 @if ERRORLEVEL 1 goto ERR
-cmake --build ~dp0\..\.out\%TOOLSET%\%ARCH_PATH% --config Release --target ALL_BUILD -j 8 --
+cmake --build "%~dp0\..\.out\%TOOLSET%\%ARCH_PATH%" --config Release --target ALL_BUILD -j 8 --
 @if ERRORLEVEL 1 goto ERR
 @goto END
 
