@@ -1,4 +1,4 @@
-@call %~dp0\setup_out_pp_root_paths.bat
+@call "%~dp0\setup_out_root_paths.bat"
 @set LOOKUP_FOR=%1
 @rem https://superuser.com/questions/1569197/what-is-the-meaning-of-tilde-in-batch-variables
 @FOR %%i IN (%OUTROOTPATHS%) DO @(
