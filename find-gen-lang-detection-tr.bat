@@ -2,7 +2,7 @@
 
 @rem https://superuser.com/questions/1569197/what-is-the-meaning-of-tilde-in-batch-variables
 
-@FOR %%i IN (%PPROOTPATHS%) DO @(
+@FOR %%i IN (%OUTROOTPATHS%) DO @(
     @FOR %%j IN (Release Debug) DO @(
         @rem echo %%~i\%%j
         @IF EXIST "%%~i\%%j\gen-lang-detection-tr.exe" @(
