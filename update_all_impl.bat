@@ -1,6 +1,6 @@
 @cd "%~dp0.."
 @echo Pulling project
-@git pull
+@git pull --recurse-submodules
 @if not exist "%~dp0..\.gitmodules" @goto SUBMODULES_UPDATE_DONE
 @echo Updating submodules
 @cd "%~dp0.."
