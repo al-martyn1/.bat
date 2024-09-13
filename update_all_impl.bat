@@ -1,7 +1,7 @@
 @cd "%~dp0.."
 @echo Pulling project
 git pull --recurse-submodules
-@if not exist "%~dp0..\.gitmodules" @goto SUBMODULES_UPDATE_DONE
+if not exist "%~dp0..\.gitmodules" @goto SUBMODULES_UPDATE_DONE
 @echo Updating submodules
 @cd "%~dp0.."
 git submodule update --init --recursive --remote --merge
@@ -24,6 +24,7 @@ git pull
 @echo Pulling .cmake submodule
 git pull
 @cd "%~dp0.."
+:SUBMODULES_UPDATE_DONE
 :SUBMODULE_CMAKE_DONE
 :NO_PULL
 @if not exist "%~dp0..\_libs\update_libs.bat" @goto LIBS_DONE
