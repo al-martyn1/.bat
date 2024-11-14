@@ -1,6 +1,6 @@
 @call "%~dp0\make_sources_brief.bat"
 
-@set EXCLUDE_DIRS=--batch-exclude-dir=_libs,libs,_lib,lib,tests,test,rc,_generators,conf,_distr_conf,doxy,src,.msvc2019,boost,icons
+@set EXCLUDE_DIRS=--batch-exclude-dir=_libs,libs,_lib,lib,tests,test,rc,_generators,conf,_distr_conf,doxy,src,_src,.msvc2019,boost,icons
 @set COMMON=--overwrite --copy-images
 @rem 
 @set GRAPHVIZ_OPTIONS=

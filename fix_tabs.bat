@@ -8,4 +8,4 @@
 @rem 
 @set TABTOOL_TAB_OPTS=--tab-size=4 --tab-delta=1 --tab --remove-trailing-spaces=Y
 @rem 
-@umba-tabtool %TABTOOL_TAB_OPTS% %OPT_PROCESS_FILES% %OPT_EXCLUDE_FILES% --scan "%~dp0\../doc" "%~dp0\../src" "%~dp0\../tests"
+@umba-tabtool %TABTOOL_TAB_OPTS% %OPT_PROCESS_FILES% %OPT_EXCLUDE_FILES% --scan "%~dp0\../doc" "%~dp0\../src" "%~dp0\../_src" "%~dp0\../tests"
