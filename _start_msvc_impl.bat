@@ -5,10 +5,11 @@
 @rem for /f "tokens=3 delims=\" %%x in ("%%a") do echo %%x
 @rem )
 
-@set MSVS_TOOLSET=
-@set MSVS_ARCH=x86
+@set MSVS_TOOLSET=2019
+@rem set MSVS_ARCH=x86
+@set MSVS_ARCH=x64
 @call %~dp0\_find_msvc.bat
-@if exist %~dp0\..\_setup_msvc.bat @call %~dp0\..\_setup_msvc.bat
+@if exist %~dp0\..\setup_msvc.bat @call %~dp0\..\setup_msvc.bat
 
 @if "%MSVS_TOOLSET%"=="" exit /B 1
 
