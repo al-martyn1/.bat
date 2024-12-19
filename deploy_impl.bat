@@ -12,6 +12,7 @@
 @rem
 echo.
 @echo Copying binaries
+@echo Binaries: %DEPLOY_BINS%
 @for %%i in (%DEPLOY_BINS%) do (
     copy /Y /B "%OUTROOTPATH%\%DEPLOY_CONFIG%\%%~i.exe"   "%DEPLOY_ROOT%\bin\"
 )
