@@ -9,9 +9,10 @@
 
 
 @if "%BRIEF_SCAN_PATHS_UNQUOTED%"=="" @set BRIEF_SCAN_PATHS="--scan=%~dp0.."
-@rem if "%BRIEF_EXTRA_OPTS_TXT_UNQUOTED%"=="" @set BRIEF_EXTRA_OPTS_TXT=--scan-notes "--notes-output-path=%~dp0\../doc"
-@if "%BRIEF_EXTRA_OPTS_MD_UNQUOTED%"==""  @set BRIEF_EXTRA_OPTS_MD=--scan-notes "--notes-output-path=%~dp0\../doc"
+@rem if "%BRIEF_EXTRA_OPTS_TXT_UNQUOTED%"=="" @set BRIEF_EXTRA_OPTS_TXT=--scan-notes "--notes-output-path=%~dp0\../doc/_md"
+@if "%BRIEF_EXTRA_OPTS_MD_UNQUOTED%"==""  @set BRIEF_EXTRA_OPTS_MD=--scan-notes "--notes-output-path=%~dp0\../doc/_md"
 umba-brief-scanner --where
-umba-brief-scanner --overwrite "%RSP%"        %BRIEF_SCAN_PATHS% %BRIEF_EXTRA_OPTS_TXT% "%~dp0\../doc/_sources_brief.txt"
-umba-brief-scanner --overwrite "%RSP%" --html %BRIEF_SCAN_PATHS%                        "%~dp0\../doc/_sources_brief.html"
-umba-brief-scanner --overwrite "%RSP%" --md   %BRIEF_SCAN_PATHS% %BRIEF_EXTRA_OPTS_MD%  "%~dp0\../doc/_sources_brief.md_"
+@rem umba-brief-scanner --overwrite %RSP%         %BRIEF_SCAN_PATHS% %BRIEF_EXTRA_OPTS_TXT% "%~dp0\../doc/_sources_brief.txt"
+@rem umba-brief-scanner --overwrite %RSP% --html  %BRIEF_SCAN_PATHS%                        "%~dp0\../doc/_sources_brief.html"
+umba-brief-scanner --overwrite %RSP% --md         %BRIEF_SCAN_PATHS% %BRIEF_EXTRA_OPTS_MD%  "%~dp0\../doc/_md/sources_brief.md_"
+umba-brief-scanner --overwrite %RSP% --md --main  %BRIEF_SCAN_PATHS%                        "%~dp0\../doc/_md/entry_points.md_"
