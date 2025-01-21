@@ -3,7 +3,7 @@
 @if "%CLOCEXCLUDEDIRS%"=="" @set CLOCEXCLUDEDIRS=.vscode,_libs,_lib,libs,lib,tests
 @if "%CLOCINPUTDIR%"=="" @set CLOCINPUTDIR=%~dp0..
 @rem if "%CLOCINPUT%"=="" @set CLOCINPUT="%CLOCINPUTDIR%\src"
-@if "%CLOCMD%"=="md_" @goto SETUP_MD
+@if "%CLOCMD%"=="_md" @goto SETUP_MD
 goto RUN_CLOC_ALL
 :SETUP_MD
 @set CLOCMDEXTSUFFIX=_
