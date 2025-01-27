@@ -9,7 +9,7 @@
 @rem set MSVS_ARCH=x86
 @set MSVS_ARCH=x64
 @call %~dp0\_find_msvc.bat
-@if exist %~dp0\..\setup_msvc.bat @call %~dp0\..\setup_msvc.bat
+@if exist %~dp0\..\set_msvc.bat @call %~dp0\..\set_msvc.bat
 
 @if "%MSVS_TOOLSET%"=="" exit /B 1
 
