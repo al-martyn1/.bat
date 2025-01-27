@@ -13,4 +13,4 @@
 
 @if "%MSVS_TOOLSET%"=="" exit /B 1
 
-@call %~dp0\_generate_msvc.bat %MSVS_TOOLSET% && @start "" ".out\%MSVS_TOOLSET%\%MSVS_ARCH%\%1%.sln"
+@call %~dp0\_generate_msvc.bat msvc%MSVS_TOOLSET% && @start "" ".out\msvc%MSVS_TOOLSET%\%MSVS_ARCH%\%1%.sln"
