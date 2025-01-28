@@ -7,9 +7,9 @@
         @rem echo P=%%~i
         @FOR %%j IN (Debug Release) DO @(
             @rem echo J=%%j
-            @rem echo TEST_PATH=%~dp0\..\.out\%%~i\%%p\%%j\%LOOKUP_FOR%.exe
-            @IF EXIST "%~dp0\..\.out\%%~i\%%p\%%j\%LOOKUP_FOR%.exe" @(
-                @set FOUND_EXE="%~dp0\..\.out\%%~i\%%p\%%j\%LOOKUP_FOR%.exe"
+            @rem echo TEST_PATH=%OUTROOTPATH_BASE%\%%~i\%%p\%%j\%LOOKUP_FOR%.exe
+            @IF EXIST "%OUTROOTPATH_BASE%\%%~i\%%p\%%j\%LOOKUP_FOR%.exe" @(
+                @set FOUND_EXE="%OUTROOTPATH_BASE%\%%~i\%%p\%%j\%LOOKUP_FOR%.exe"
                 @goto FOUND
 )
 )
