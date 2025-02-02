@@ -4,7 +4,7 @@ git pull --recurse-submodules
 if not exist "%~dp0..\.gitmodules" @goto SUBMODULES_UPDATE_DONE
 @echo Updating submodules
 @cd "%~dp0.."
-git submodule update --init --recursive --remote --merge
+git submodule update --init --recursive --merge
 @if "%1"=="no-pull" @goto NO_PULL
 @if "%1"=="no_pull" @goto NO_PULL
 @if "%1"=="NO-PULL" @goto NO_PULL
