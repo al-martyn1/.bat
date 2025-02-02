@@ -16,12 +16,14 @@ git submodule update --init --recursive --merge
 @if not exist "%~dp0..\.bat" @goto SUBMODULE_BAT_DONE
 @cd "%~dp0..\.bat"
 @echo Pulling .bat submodule
+git.exe checkout main --
 git pull
 @cd "%~dp0.."
 :SUBMODULE_BAT_DONE
 @if not exist "%~dp0..\.cmake" @goto SUBMODULE_CMAKE_DONE
 @cd "%~dp0..\.cmake"
 @echo Pulling .cmake submodule
+git.exe checkout main --
 git pull
 @cd "%~dp0.."
 :SUBMODULES_UPDATE_DONE
