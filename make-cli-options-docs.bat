@@ -1,5 +1,5 @@
-@if not exist "%~dp0..\set_sln_exes.bat" @goto DO_NOTHING
-@call "%~dp0..\set_sln_exes.bat"
+@if not exist "%~dp0..\.set_sln_exes.bat" @goto DO_NOTHING
+@call "%~dp0..\.set_sln_exes.bat"
 @rem
 @call "%~dp0\setup_out_root_paths.bat"
 @rem
