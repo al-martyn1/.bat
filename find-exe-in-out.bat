@@ -5,7 +5,7 @@
     @rem echo I=%%~i
     @FOR %%p in (%PLATFORMS%) do @(
         @rem echo P=%%~i
-        @FOR %%j IN (Debug Release) DO @(
+        @FOR %%j IN (%CONFIG% Debug Release) DO @(
             @rem echo J=%%j
             @rem echo TEST_PATH=%OUTROOTPATH_BASE%\%%~i\%%p\%%j\%LOOKUP_FOR%.exe
             @IF EXIST "%OUTROOTPATH_BASE%\%%~i\%%p\%%j\%LOOKUP_FOR%.exe" @(
