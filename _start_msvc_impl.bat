@@ -64,4 +64,4 @@
 
 set MSVC_SLN_EXT=sln
 @call %~dp0\msvc_set_sln_ext.bat
-@call %~dp0\_generate_msvc.bat msvc%MSVC% && @start "" ".out\msvc%MSVC%\%MSVC_ARCH%\%1.%MSVC_SLN_EXT%"
+@call %~dp0\_generate_msvc.bat msvc%MSVC% %MSVC_ARCH% && @start "" ".out\msvc%MSVC%\%MSVC_ARCH%\%1.%MSVC_SLN_EXT%"
